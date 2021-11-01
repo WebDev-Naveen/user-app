@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { getUser } from "./userApi";
+import { getUser } from "../apiCall";
 
 const initialState = {
   users: [],

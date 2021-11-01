@@ -1,4 +1,4 @@
-import userApi from "../../api/userApi";
+import userApi from "../api/userApi";
 
 export async function getUser({ method, param }) {
   const response = await userApi(param, {

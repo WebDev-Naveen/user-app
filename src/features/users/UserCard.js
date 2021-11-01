@@ -8,6 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import { withStyles } from "@mui/styles";
+import { useHistory } from "react-router";
 
 const styles = (muiBaseTheme) => ({
   card: {
@@ -47,8 +48,10 @@ const styles = (muiBaseTheme) => ({
 });
 
 function UserCard({ classes, data }) {
+  const history = useHistory();
+
   return (
-    <div className="App">
+    <div onClick={() => history.push(`/${data.id}`)}>
       <Card className={classes.card}>
         <CardMedia className={classes.media} image={data.picture} />
         <CardContent className={classes.content}>
